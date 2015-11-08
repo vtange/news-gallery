@@ -1,18 +1,21 @@
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style-0.css"/>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="filters.js"></script>
 </head>
-<body>
+<body data-ng-app="NewsSearcher">
   <div class="introduction">
   <h1>FreeCodeCamp</h1>
   <p>Camper News</p>
   </div>
   <div class="content">
+      <div class="gallery-container" data-ng-controller="MainCtrl as loader">
+        <a data-ng-href="{{obj.link}}" data-ng-repeat="obj in storage.datadata"><div class="gallery-item" ><div class="picholder"><img data-ng-if="!checkPic(obj)" class="pic" src="https://pbs.twimg.com/profile_images/562385977390272512/AK29YaTf.png"/><img data-ng-if="checkPic(obj)" class="pic" ng-src="{{obj.image}}"/></div><div class="information-panel">{{obj.headline | truncate:27}}<p>by {{obj.author.username}}</p><p><span>{{obj.upVotes.length}} &#9825;</span><p>Posted on: {{obj.timePosted}}</p></p></div></div></a>
+      
+      
 
-      
-      
-      
-      
+      </div>
   </div>
 </body>
