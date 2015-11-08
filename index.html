@@ -12,7 +12,7 @@
   </div>
   <div class="content">
       <div class="gallery-container" data-ng-controller="MainCtrl as loader">
-        <a data-ng-href="{{obj.link}}" data-ng-repeat="obj in storage.datadata"><div class="gallery-item" ><div class="picholder"><img data-ng-if="!checkPic(obj)" class="pic" src="https://pbs.twimg.com/profile_images/562385977390272512/AK29YaTf.png"/><img data-ng-if="checkPic(obj)" class="pic" ng-src="{{obj.image}}"/></div><div class="information-panel">{{obj.headline | truncate:27}}<p>by {{obj.author.username}}</p><p><span>{{obj.upVotes.length}} &#9825;</span><p>Posted on: {{obj.timePosted}}</p></p></div></div></a>
+        <a data-ng-href="{{obj.link}}" data-ng-repeat="obj in storage.datadata"><div class="gallery-item" ><div class="picholder"><img data-ng-if="!checkPic(obj)" class="pic" src="https://pbs.twimg.com/profile_images/562385977390272512/AK29YaTf.png"/><img data-ng-if="checkPic(obj)" class="pic" ng-src="{{obj.image}}"/></div><div class="information-panel"><B>{{obj.headline | truncate:24}}</B><p>by {{obj.author.username}}</p><p class="harts">{{obj.upVotes.length}} &#9825;</p></div></div></a>
       
       
 
