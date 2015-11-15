@@ -11,11 +11,8 @@
   <p>Camper News</p>
   </div>
   <div class="content">
-      <div class="gallery-container" data-ng-controller="MainCtrl as loader">
-        <a data-ng-href="{{obj.link}}" data-ng-repeat="obj in storage.datadata"><div class="gallery-item" ><div class="picholder"><img data-ng-if="!checkPic(obj)" class="pic" src="https://pbs.twimg.com/profile_images/562385977390272512/AK29YaTf.png"/><img data-ng-if="checkPic(obj)" class="pic" ng-src="{{obj.image}}"/></div><div class="information-panel"><B>{{obj.headline | truncate:24}}</B><p>by {{obj.author.username}}</p><p class="harts">{{obj.upVotes.length}} &#9825;</p></div></div></a>
-      
-      
-
+      <div class="gallery-container" data-ng-controller="MainCtrl as loader"><!--pic or avatar--><!--info panel in block format-->
+        <a data-ng-href="{{obj.link}}" data-ng-repeat="obj in storage.datadata"><div class="gallery-item" ><div class="picholder"><img data-ng-if="!obj.image" class="pic" src="https://pbs.twimg.com/profile_images/562385977390272512/AK29YaTf.png"/><img data-ng-if="obj.image" class="pic" ng-src="{{obj.image}}"/></div><div class="information-panel"><B>{{obj.headline | truncate:24}}</B><p>by {{obj.author.username}}</p><p class="harts">{{obj.upVotes.length}} &#9825;</p></div></div></a>
       </div>
   </div>
 </body>

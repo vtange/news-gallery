@@ -18,12 +18,13 @@ body {
   padding-left:10vw;
   padding-right:10vw;
 }
-
+/*---------*/
+/*-Gallery-*/
+/*---------*/
 .gallery-container {
   position: relative;  
-  text-align:left;
+  text-align:left; /* make items line up left like wordprocessor*/
 }
-
 .gallery-item{
   position:relative;
   display: inline-block;
@@ -37,6 +38,7 @@ body {
     cursor: pointer;
     overflow: hidden;
 }
+/*picholder, then info-panel*/
 .picholder{
    position: absolute;
    top:0;
