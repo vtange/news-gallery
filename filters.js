@@ -1,17 +1,6 @@
 (function() {
     //start of function
 var filters=angular.module('filters', []);
-filters.filter('online', function() {
-    return function(input) {
-        var out = [];
-        for (var i = 0; i < input.length; i++) {
-            if(input[i].stream != null){
-                out.push(input[i]);
-            }
-        }
-        return out;
-    }
-});
 filters.filter('truncate', function() {
         return function (input, num) {
 
