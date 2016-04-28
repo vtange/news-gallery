@@ -1,6 +1,14 @@
 # news-gallery
 
-# Takeaways
+## Tech
+AngularJS + filtering
 
-CSS: Gallery format
-JS: Nothin' really, just a clean project of a list rendered gallery-style with a Truncated title.
+## Niceties
+Angular filter truncate text
+
+### Details
+#### CSS
+ - none
+
+#### JS
+ - truncate text -> see filters.js
